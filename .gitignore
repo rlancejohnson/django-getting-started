@@ -3,3 +3,6 @@ __pycache__
 
 # Django database file
 db.sqlite3
+
+# Desktop Services
+.DS_store
