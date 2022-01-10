@@ -9,3 +9,6 @@ def welcome(response):
 
 def date(request):
     return HttpResponse(f"This page was served at {str(datetime.now())}")
+
+def about(request):
+    return HttpResponse(f"I am excited to start writing python django code for Patri.")
