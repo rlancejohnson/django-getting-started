@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 
-from .models import Meeting
+from .models import Meeting, Room
 
 # Create your views here.
 def detail(request, id):
@@ -8,4 +8,11 @@ def detail(request, id):
 
     return render(request, "meetings/detail.html", {
         "meeting": meeting
+    })
+
+def rooms(request):
+    rooms = Room.objects.all()
+
+    return render(request, "meetings/rooms.html", {
+        "rooms": rooms
     })
