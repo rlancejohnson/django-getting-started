@@ -1,14 +1,8 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'website/style.css' %}">
-    <title>Welcome!</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
     <h1>Welcome to the Meeting Planner!</h1>
     <p>
         This is the demo application for the course
@@ -16,8 +10,6 @@
         on <a href="http://www.pluralsight.com">
         Pluralsight</a>
     </p>
-
-    <!--<img src="{% static 'website/Profile_Picture.jpg' %}" width="100px">-->
 
     <h2>Meetings</h2>
     <ul>
@@ -30,5 +22,4 @@
         {% endfor %}
     </ul>
     <a href="{% url 'rooms' %}">Rooms</a>
-</body>
-</html>
+{% endblock %}
